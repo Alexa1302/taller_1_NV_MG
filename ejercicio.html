@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <script>
+        let numeroValido = false;
+        let numero;
+
+        while (!numeroValido) {
+            let puntaje = prompt('Ingrese el puntaje');
+            numero = Number(puntaje);
+
+            if (puntaje.trim() === "") {
+                alert('No ingresaste un numero válido');
+                continue;
+            } 
+            
+            if (isNaN(numero)) {
+                alert('No ingresaste un numero válido');
+            }else {
+                numeroValido = true;
+            }
+        }
+
+        if (numero >= 90) {
+                alert("Excelente");
+            } else if (numero >= 70 && numero <= 89) {
+                alert("Bueno");
+            } else {
+                alert("Necesitas mejorar");
+            }
+
+    </script>
+</body>
+
+</html>
